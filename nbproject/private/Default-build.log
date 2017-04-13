@@ -1,0 +1,26 @@
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf --silentoldconfig Kconfig
+*
+* Restart config...
+*
+*
+* Linux/x86 3.14.33 Kernel Configuration
+*
+64-bit kernel (64BIT) [Y/n/?] (NEW) aborted!
+
+Console input/output is redirected. Run 'make oldconfig' to update configuration.
+
+make[2]: *** [silentoldconfig] Error 1
+make[1]: *** [silentoldconfig] Error 2
+  SYSHDR  arch/x86/syscalls/../include/generated/uapi/asm/unistd_32.h
+  SYSHDR  arch/x86/syscalls/../include/generated/uapi/asm/unistd_64.h
+  SYSHDR  arch/x86/syscalls/../include/generated/uapi/asm/unistd_x32.h
+  SYSTBL  arch/x86/syscalls/../include/generated/asm/syscalls_32.h
+  HOSTCC  arch/x86/tools/relocs_32.o
+  HOSTCC  arch/x86/tools/relocs_64.o
+  HOSTCC  arch/x86/tools/relocs_common.o
+  HOSTLD  arch/x86/tools/relocs
+make: *** No rule to make target `include/config/auto.conf', needed by `include/config/kernel.release'.  Stop.
